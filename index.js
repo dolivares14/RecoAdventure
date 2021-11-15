@@ -182,7 +182,7 @@ app.post("/ToSearch",(req,res)=>{
 
 
 
-app.get("/InsertObjects",(req,res)=>{
+app.get("/",(req,res)=>{
     sql="Select * from elementos";
     con.query(sql,(err,results)=>{
         if(err){
