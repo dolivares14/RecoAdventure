@@ -9,10 +9,10 @@ var fileUpload = require("express-fileupload");
 
 mysql =  require('mysql');  
 con = mysql.createConnection({
-    host:"localhost",
-    user:"recoserver",
-    password:"O[sv(aWkI/7)hmzt",
-    database:"recoserver"
+    host:"fdb28.awardspace.net",
+    user:"3514550_3514550",
+    password:"2015mericista",
+    database:"3514550_3514550"
 
     });
 
