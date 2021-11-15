@@ -3,11 +3,14 @@ mysql =  require('mysql');
 
     
     con = mysql.createConnection({
-    host:"localhost",
-    user:"recoserver",
-    password:"O[sv(aWkI/7)hmzt",
-    database:"recoserver"
+    host:"sql5.freemysqlhosting.net",
+    user:"sql5451190",
+    password:"lZxDMxgH24",
+    database:"sql5451190",
+
+
     });
+
 
     function  searchquery(sql){
             con.query(sql,function(errquery,result,fields){

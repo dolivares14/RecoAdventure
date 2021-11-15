@@ -9,10 +9,11 @@ var fileUpload = require("express-fileupload");
 
 mysql =  require('mysql');  
 con = mysql.createConnection({
-    host:"fdb28.awardspace.net",
-    user:"3514550_3514550",
-    password:"2015mericista",
-    database:"3514550_3514550"
+    host:"sql5.freemysqlhosting.net",
+    user:"sql5451190",
+    password:"lZxDMxgH24",
+    database:"sql5451190",
+
 
     });
 
@@ -150,7 +151,7 @@ app.post("/insertNewObject",(req,res)=>{
             console.log("Hubo el siguiente error: "+err);
             res.send("Error");
         }      
-        res.redirect("/InsertObjects");
+        res.redirect("/");
     })
 })
 
