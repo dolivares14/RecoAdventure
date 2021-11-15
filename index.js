@@ -244,8 +244,8 @@ app.get("/rekog",(req,res)=>{
 app.post("/AWScheck",(req,res)=>{
     
     aws.config.update({
-        accessKeyId:'AKIA2RSV6BMUXBONFSVQ',
-        secretAccessKey:'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',
+       accessKeyId:'AKIA2RSV6BMUVD6PJLRK',
+       secretAccessKey:'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',
         region:'us-east-2'
     })
     let buff = new Buffer(req.body.ImgData, 'base64');
@@ -298,8 +298,8 @@ app.post("/AddTagsToElement",(req,res)=>{
     }else{
        var file = base64_encode(uploadPath);
         aws.config.update({
-            accessKeyId:'AKIA2RSV6BMUXBONFSVQ',
-            secretAccessKey:'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',
+            accessKeyId:'AKIA2RSV6BMUVD6PJLRK',
+            secretAccessKey:'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',
             region:'us-east-2'
         })  
         var rekognition = new aws.Rekognition();
@@ -347,7 +347,7 @@ app.post("/Addlabels",(req,res)=>{
         
     }
 
-    res.redirect("/InsertObjects");
+    res.redirect("/");
 })
 
 
