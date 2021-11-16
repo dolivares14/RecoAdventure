@@ -79,16 +79,29 @@ app.post("/playerlist",(req,res)=>{
 app.post("/newuser",(req,res)=>{
     hash=req.body.playerhash;
     username=req.body.username;
-    sql="Insert into players(username,playerhash) values('"+username+"','"+hash+"')";
+    var sql="Select * from players where username='"+username+"'";
     con.query(sql,(err,results)=>{
         if(err){
             console.log("Hubo el siguiente error: "+err);
             res.send("Error");
         }else{
-                res.send(results);
+            if(results.length>0){
+                res.send(false);
+            }else{
+                sql="Insert into players(username,playerhash) values('"+username+"','"+hash+"')";
+                    con.query(sql,(err,results)=>{
+                        if(err){
+                            console.log("Hubo el siguiente error: "+err);
+                            res.send("Error");
+                        }else{
+                                res.send(results);
+                            }
+                        
+                })
             }
-        
-    })
+        }
+    });
+    
 })
 
 
