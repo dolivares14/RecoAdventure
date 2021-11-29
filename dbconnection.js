@@ -3,10 +3,11 @@ mysql =  require('mysql');
 
     
     con = mysql.createConnection({
-    host:"recoadventureserver.000webhostapp.com",
-    user:"id17944597_recoserveruser",
-    password:"<4EZA-KMSs>kFdA#",
-    database:"id17944597_recoserver",
+    host:"sql10.freesqldatabase.com",
+    user:"sql10455116",
+    password:"ca3FtSeRSf",
+    database:"sql10455116",
+
 
 
     });
