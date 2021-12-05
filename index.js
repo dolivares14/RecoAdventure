@@ -22,8 +22,6 @@ con = mysql.createConnection({
 var dbcon= require("./dbconnection");
 
 
-
-
 var app= express();
 app.set('port', (process.env.PORT || 4000));
 app.use(fileUpload());
