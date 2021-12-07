@@ -10,9 +10,9 @@ var fileUpload = require("express-fileupload");
 mysql =  require('mysql');  
 con = mysql.createConnection({
     host:"sql10.freesqldatabase.com",
-    user:"sql10455116",
-    password:"ca3FtSeRSf",
-    database:"sql10455116",
+    user:"sql10456973",
+    password:"WFwlDFEIk8",
+    database:"sql10456973",
 
 
     });
