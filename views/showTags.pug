@@ -1,0 +1,13 @@
+extends layout.pug 
+block title 
+    title Tags Resultantes 
+block content 
+    div(class="container")
+        h1 Tags Resultados de imagen 
+        form(action="Addlabels" method="Post")
+            input(type="hidden" value=elementId name="ElementID")
+            div(class="form-group")
+            each tag,index in tags 
+                label(for=`Label${index}`)=`${tag.Name} ---- ${tag.Confidence} % ` 
+                input(type="checkbox" value=tag.Name name=`Label${index}`)
+                br 

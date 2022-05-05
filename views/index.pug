@@ -1,0 +1,45 @@
+extends layout.pug 
+block title 
+    title Crear nuevo objeto
+block content
+    div(class="container")
+        h1 Insertar un nuevo objeto 
+        form(action="InsertNewObject" method="POST")
+            div(class="form-group")
+                label(for="name" ) Nombre
+                input(type="text" name="name")  
+            div(class="form-group")
+                label(for="difficulty") Dificultad
+                select(name="difficulty")
+                    option(value="Easy") Facil
+                    option(value="normal") Normal 
+                    option(value="hard") Dificil 
+                    option(value="VeryHard") Muy Dificil 
+            div(class="form-group")
+                label(for="category") Categoria 
+                select(name="category")
+                    option(value="Comida") Comida
+                    option(value="Limpieza") Limpieza
+                    option(value="Tecnologia")  Tecnologia
+                    option(value="Utensilios") Utensilios 
+                    option(value="Herramientas") Herramientas
+                    option(value="Muebles") Muebles
+                    option(value="Juguetes") Juguetes
+                    option(value="Transporte") Transporte
+            input(type="submit", name="bot", class="btn btn-light")
+        a(href="/rekog") 
+            button(class="btn btn-light") Añadir tags a objetos existentes
+        div 
+            table(class="table table-striped")
+                thead 
+                    th N°
+                    th Nombre 
+                    th Dificultad 
+                    th Categoria 
+                tbody
+                    each element in elements
+                        tr 
+                            td=element.id_elem 
+                            td=element.name     
+                            td=element.difficulty 
+                            td=element.category 

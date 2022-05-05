@@ -1,0 +1,10 @@
+extends layout.pug 
+block title 
+    title Insertar imagen 
+block content
+    form(action="AddTagstoElement" encType="multipart/form-data", method="POST")
+            select(name="element")
+                each element in elements 
+                    option(value=element.id_elem)= element.name 
+            input(type="file" name="ImgData")
+            input(type="submit" class="btn btn-light")   
